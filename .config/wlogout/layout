@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "hyprlock",
+    "action" : "~/.config/hypr/Scripts/randomHyprlockWallpaper.sh && hyprlock",
     "text" : "Lock",
     "keybind" : "1"
 }
