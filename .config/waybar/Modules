@@ -265,6 +265,16 @@
         "smooth-scrolling-threshold": 1
     },
 
+   "custom/backlight#external": {
+       "interval": 2,
+       "format": "{}",
+       "exec": "~/.config/hypr/Scripts/ddcBrightness.sh",
+       "return-type": "json",
+       "on-scroll-up": "~/.config/hypr/Scripts/ddcBrightness.sh up",
+       "on-scroll-down": "~/.config/hypr/Scripts/ddcBrightness.sh down",
+       "smooth-scrolling-threshold": 1
+   },
+
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-bluetooth": "{icon} 󰂰 {volume}%",
