@@ -1,8 +1,0 @@
-providers:
-- {account: Abu-aljoj, password: 2, tokenScopes: 'gist,read:org,repo,user,workflow',
-  queryOwnRepositories: true, queryTopRepositories: false, queryStarredRepositories: false,
-  name: github.com, createUpstreamRemote: false, useSshUrl: false, uuid: 5e41572d-cf0a-47c1-a651-0dce73d9aac3,
-  providerId: github.com}
-fingerprint: []
-urlUuid:
-- {url: 'https://github.com/Abu-aljoj/dotfiles', uuid: 5e41572d-cf0a-47c1-a651-0dce73d9aac3}

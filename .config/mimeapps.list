@@ -1,5 +1,0 @@
-
-[Default Applications]
-x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
-inode/directory=nemo.desktop
-application/x-gnome-saved-search=nemo.desktop
