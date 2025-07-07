@@ -1,0 +1,217 @@
+/* Waybar Style */
+
+* {
+    min-height: 0;
+    font-size: 15px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+#waybar.empty,
+#waybar.tiled,
+#waybar.floating {
+    background-color: transparent;
+}
+
+window#waybar.empty,
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+/* --- Left Modules --- */
+
+#workspaces {
+    background: transparent;
+    margin: 2px;
+    padding: 0px;
+    border-radius: 10px;
+    border: 0px;
+    font-style: normal;
+    color: white;
+}
+
+#workspaces button {
+    padding: 0px 3px;
+    margin: 2px 2px;
+    border-radius: 10px;
+    border: 0px;
+    color: white;
+    background: rgba(44, 62, 80, 0.3);
+    opacity: 1.0;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#workspaces button.active {
+    padding: 0px 3px;
+    margin: 2px 2px;
+    border-radius: 10px;
+    border: 0px;
+    color: #2C3E50;
+    background: white;
+    opacity: 1.0;
+    min-width: 30px;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#workspaces button:hover {
+    border-radius: 10px;
+    color: #2C3E50;
+    background: white;
+    opacity: 0.8;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#tray {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+/* --- Center Modules --- */
+
+#clock {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 1px 10px;
+}
+
+/* --- Right Modules --- */
+
+#window {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 1px 10px;
+}
+
+#language {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+#idle_inhibitor.activated {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+#idle_inhibitor.deactivated {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+#backlight {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+#pulseaudio {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+#pulseaudio.microphone {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+#pulseaudio.microphone.source-muted {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+#pulseaudio.muted {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+#battery {
+    color: white;
+    background: transparent;
+    border-radius: 50px 50px;
+    margin: 2px;
+    padding: 0px 8px;
+}
+
+#battery.critical:not(.charging) {
+    color: red;
+    animation-name: blink;
+    animation-duration: 3.0s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-power {
+    color: white;
+    background: transparent;
+    border-radius: 10px 0px 0px 25px;
+    margin: 2px 0px;
+    padding: 1px 3px 1px 8px;
+}
+
+/* --- Keyframes & Tooltip --- */
+
+@keyframes gradient_horizontal {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes swiping {
+    0% {
+        background-position: 0% 200%;
+    }
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+tooltip {
+    background: rgba(15, 20, 25, 0.8);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: white;
+}

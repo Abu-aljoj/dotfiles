@@ -1,0 +1,64 @@
+/* Wlogout Style */
+
+window {
+    font-size: 24pt;
+    color: #FFFFFF;
+    background-color: rgba(255,255,255,0.05);
+}
+
+button {
+    background-position: center;
+    background-size: 35%;
+    background-color: transparent;
+    transition: all 0.3s;
+    border-radius: 100px;
+    outline:none;
+    box-shadow:none;
+}
+
+button:hover {
+    background-color: #FFFFFF; 
+    color: #2C3E50;
+    background-size: 50%;
+    margin: 15px;
+    border-radius: 100px;
+    outline-style: none;
+	
+}
+
+#lock {
+    background-image: image(url("./icons/lock.png"));
+}
+#lock:hover {
+    background-image: image(url("./icons/lock-hover.png"));
+}
+#logout {
+    background-image: image(url("./icons/logout.png"));
+}
+#logout:hover {
+    background-image: image(url("./icons/logout-hover.png"));
+}
+#suspend {
+    background-image: image(url("./icons/sleep.png"));
+}
+#suspend:hover {
+    background-image: image(url("./icons/sleep-hover.png"));
+}
+#shutdown {
+    background-image: image(url("./icons/power.png"));
+}
+#shutdown:hover {
+    background-image: image(url("./icons/power-hover.png"));
+}
+#reboot {
+    background-image: image(url("./icons/restart.png"));
+}
+#reboot:hover {
+    background-image: image(url("./icons/restart-hover.png"));
+}
+#hibernate {
+    background-image: image(url("./icons/hibernate.png"));
+}
+#hibernate:hover {
+    background-image: image(url("./icons/hibernate-hover.png"));
+}

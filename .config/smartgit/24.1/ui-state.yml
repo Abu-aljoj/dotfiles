@@ -1,0 +1,22 @@
+bounds:
+- {key: std, x: 1921, y: 26, width: 1924, height: 1082}
+- {key: std.output}
+- {key: git.stashSave, width: 500, height: 309, x: 0, y: -1}
+- {key: hostingProvider.github.com.repository}
+- {key: repository.search}
+- {key: preferences}
+conflictSolverFrame: {}
+indexEditorFrame: {}
+columns: {}
+gitViewFileFilter: {}
+deepGitUiConfiguration: {}
+confirmations: {exit.showConfirmation: true, remove.repositoryOrGroup: true}
+repositoriesToReopen: []
+tempDirs: [/tmp/smartgit15703057530972957031]
+project.files.git.separateWtIndex: true
+gitProjectLayout.main: (([+2x3:directories ][+1x2:branches ])(([+7x2:files ][+3x1:message
+  ])[+10x2:changes ]([+3x1:outgoing ][-3x1:output ])))
+log.wtIndex.onDemand: false
+lastRepositoryPath: /home/jojo/.dotfiles
+git.addBranch.switch: false
+colorSettings.syntax: 4

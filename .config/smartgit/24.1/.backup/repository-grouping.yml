@@ -1,0 +1,3 @@
+structure:
+- {name: .dotfiles, path: ~/.dotfiles, path.absolute: /home/jojo/.dotfiles}
+recentlyUsed: [~/.dotfiles]

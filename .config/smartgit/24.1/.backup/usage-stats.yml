@@ -1,0 +1,21 @@
+header: {started: 1751874640665, uid: drd281mgef, licenseType: evaluation, build: 21152,
+  os: linux, osv: 6.15.5-arch1-1}
+stats:
+  started: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  system.os: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  system.os.name.linux: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  system.os.version.linux/6.15.5-arch1-1: {invocations: 1, invocationLast: 20250707,
+    invocationDays: 1}
+  system.os.linux.Arch Linux: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  system.os.wsl.false: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  system.java.version.21.0.4: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  system.vmType.kind.none.regular: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  system.vmType.board.American Megatrends International, LLC.: {invocations: 1, invocationLast: 20250707,
+    invocationDays: 1}
+  i18n.locale.<null>: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  system.theme.dark: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  bundledGit.check: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  bundledGit.check.shouldBeUsed: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  preferences.mainWindow.std: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  preferences.theme.auto: {invocations: 1, invocationLast: 20250707, invocationDays: 1}
+  window.std: {invocations: 1, invocationLast: 20250707, invocationDays: 1}

@@ -1,0 +1,18 @@
+bounds:
+- {key: std, x: 1921, y: 26, width: 964, height: 1082}
+conflictSolverFrame: {}
+indexEditorFrame: {}
+columns: {}
+gitViewFileFilter: {}
+deepGitUiConfiguration: {}
+confirmations: {exit.showConfirmation: true}
+repositoriesToReopen:
+- window: standard
+  repositories: [/home/jojo/.dotfiles]
+  activeRepository: /home/jojo/.dotfiles
+tempDirs: [/tmp/smartgit1433031268101496704]
+project.files.git.separateWtIndex: true
+gitProjectLayout.main: (([+2x3:directories ][+1x2:branches ])(([+7x2:files ][+3x1:message
+  ])[+10x2:changes ]([+3x1:outgoing ][-3x1:output ])))
+log.wtIndex.onDemand: false
+lastRepositoryPath: /home/jojo/.dotfiles

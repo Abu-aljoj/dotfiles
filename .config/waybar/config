@@ -1,0 +1,67 @@
+/* Waybar Config */
+
+[
+    {
+        "include": [
+            "$HOME/.config/waybar/Modules"
+        ],
+        "layer": "top",
+        "output": "eDP-1",
+        "mode": "dock",
+        "exclusive": true,
+        "passthrough": false,
+        "position": "top",
+        "spacing": 0,
+        "fixed-center": true,
+        "margin-top": 0,
+        "margin-left": 0,
+        "margin-right": 0,
+        "reload_style_on_change": true,
+        "modules-left": [
+            "hyprland/workspaces#roman",
+            "tray"
+        ],
+        "modules-center": [
+            "clock"
+        ],
+        "modules-right": [
+            "hyprland/language",
+            "idle_inhibitor",
+            "backlight",
+            "pulseaudio",
+            "pulseaudio#microphone",
+            "battery"
+        ]
+    },
+    {
+        "include": [
+            "$HOME/.config/waybar/Modules"
+        ],
+        "layer": "top",
+        "output": "!eDP-1",
+        "mode": "dock",
+        "exclusive": true,
+        "passthrough": false,
+        "position": "top",
+        "spacing": 0,
+        "fixed-center": true,
+        "margin-top": 0,
+        "margin-left": 0,
+        "margin-right": 0,
+        "reload_style_on_change": true,
+        "modules-left": [
+            "hyprland/workspaces#roman",
+            "tray"
+        ],
+        "modules-center": [
+            "clock"
+        ],
+        "modules-right": [
+            "hyprland/language",
+            "idle_inhibitor",
+            "pulseaudio#2",
+            "pulseaudio#microphone#2",
+            "battery"
+        ]
+    }
+]

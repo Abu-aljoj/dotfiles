@@ -1,0 +1,7 @@
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME=qt6ct
+
+export HYPRSHOT_DIR=/home/jojo/Pictures/Screenshots/
+
+export LANG=en_IL.UTF-8
+export LC_CTYPE=en_IL.UTF-8
