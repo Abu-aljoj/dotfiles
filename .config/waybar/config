@@ -59,7 +59,7 @@
         "modules-right": [
             "hyprland/language",
             "idle_inhibitor",
-	    "custom/backlight#external",
+	          "custom/backlight#external",
             "pulseaudio#2",
             "pulseaudio#microphone#2",
             "battery"

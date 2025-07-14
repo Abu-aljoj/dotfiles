@@ -248,7 +248,7 @@
         "interval": 2,
         "align": 0,
         "rotate": 0,
-        "format": "{icon} {percent}%",
+        "format": "{icon}{percent}%",
         "format-icons": [
             " ",
             " ",
@@ -276,8 +276,8 @@
    },
 
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon} 󰂰 {volume}%",
+        "format": "{icon}{volume}%",
+        "format-bluetooth": "{icon}󰂰{volume}%",
         "format-muted": "󰖁",
         "format-icons": {
             "headphone": "",
@@ -305,7 +305,7 @@
     "pulseaudio#microphone": {
         "format": "{format_source}",
         "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format-source-muted": " ",
         "tooltip-format": "{source_desc} | {source_volume}%",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
         "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%+",
@@ -314,8 +314,8 @@
     },
 
   "pulseaudio#2": {
-        "format": "{icon}  {volume}%",
-        "format-bluetooth": "{icon} 󰂰 {volume}%",
+        "format": "{icon}{volume}%",
+        "format-bluetooth": "{icon}󰂰{volume}%",
         "format-muted": "󰖁",
         "format-icons": {
             "headphone": "",
@@ -343,7 +343,7 @@
     "pulseaudio#microphone#2": {
         "format": "{format_source}",
         "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format-source-muted": " ",
         "tooltip-format": "{source_desc} | {source_volume}%",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
         "on-scroll-down": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%-",
