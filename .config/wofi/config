@@ -1,0 +1,11 @@
+show=drun
+normal_window = false
+allow_images = false
+term = kitty
+hide_scroll = true
+lines = 15
+columns = 1
+location = center
+sort_order = alphabetical
+gtk_dark = true
+key_expand = Tab

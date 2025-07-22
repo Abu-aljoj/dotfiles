@@ -445,7 +445,7 @@
   "menus.dashboard.shortcuts.left.shortcut3.icon": "",
   "menus.dashboard.shortcuts.left.shortcut3.command": "",
   "menus.dashboard.shortcuts.left.shortcut3.tooltip": "",
-  "menus.dashboard.shortcuts.left.shortcut4.command": "nwg-drawer-launch",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "wofi",
   "bar.customModules.netstat.label": true,
   "bar.customModules.netstat.dynamicIcon": false,
   "bar.customModules.cava.showIcon": true,
@@ -476,5 +476,6 @@
   "bar.customModules.weather.label": true,
   "theme.bar.buttons.modules.weather.enableBorder": false,
   "menus.dashboard.powermenu.avatar.image": "/home/jojo/Downloads/WhatsApp Image 2025-07-18 at 11.26.03 AM.jpeg",
-  "menus.dashboard.shortcuts.left.shortcut4.icon": "◯"
+  "menus.dashboard.shortcuts.left.shortcut4.icon": "◯",
+  "theme.bar.menus.menu.network.scaling": 100
 }
