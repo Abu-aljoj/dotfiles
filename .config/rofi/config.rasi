@@ -1,22 +1,14 @@
 configuration {
-    line-margin: 10;
-
-    display-ssh:    "";
-    display-run:    "";
-    display-drun:   "";
-    display-window: "";
-    display-combi:  "";
-    show-icons:     false;
+  font: "JetBrainsMonoNL NF 12";
+  drun-display-format: "{name}";
 }
 
-
-@theme "~/.config/rofi/nord.rasi"
+@theme "~/.config/rofi/themes/windows11-list-dark.rasi"
 
 listview {
-	lines: 15;
-	columns: 1;
+  lines: 15;
 }
 
 window {
-	width: 30%;
+  width: 35%;
 }

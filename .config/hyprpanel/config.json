@@ -468,7 +468,7 @@
   "menus.dashboard.powermenu.logout": "uwsm stop",
   "bar.network.rightClick": "nm-connection-editor",
   "bar.customModules.kbLayout.leftClick": "hyprctl switchxkblayout all next",
-  "bar.volume.rightClick": "pwvucontrol",
+  "bar.volume.rightClick": "pavucontrol",
   "menus.dashboard.powermenu.confirmation": false,
   "theme.bar.location": "top",
   "bar.bluetooth.rightClick": "blueman-manager",

@@ -1,0 +1,16 @@
+
+configuration {
+  font: "twemoji 16";
+  drun-display-format: "{name}";
+}
+
+@theme "~/.config/rofi/nord.rasi"
+
+listview {
+  lines: 12;
+  columns: 5;
+}
+
+window {
+  width: 35%;
+}
