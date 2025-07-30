@@ -487,5 +487,7 @@
   "theme.bar.buttons.innerRadiusMultiplier": "0",
   "theme.bar.dropdownGap": "2.45em",
   "bar.scrollSpeed": 5,
-  "theme.bar.buttons.windowtitle.enableBorder": false
+  "theme.bar.buttons.windowtitle.enableBorder": false,
+  "menus.dashboard.shortcuts.right.shortcut3.tooltip": "Screenshot a region",
+  "notifications.clearDelay": 80
 }

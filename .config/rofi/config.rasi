@@ -3,7 +3,7 @@ configuration {
   drun-display-format: "{name}";
 }
 
-@theme "~/.config/rofi/themes/windows11-list-dark.rasi"
+//@theme "~/.config/rofi/themes/nord.rasi"
 
 listview {
   lines: 15;
@@ -12,3 +12,5 @@ listview {
 window {
   width: 35%;
 }
+
+@theme "/usr/share/rofi/themes/material.rasi"

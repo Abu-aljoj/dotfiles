@@ -5,6 +5,7 @@
 # Configuration
 WALLPAPER_DIR="${HOME}/Pictures/Wallpapers/Nord-Wallpaper"
 CONFIG_FILE="${HOME}/.config/hypr/hyprpaper.conf"
+HYPLOCK_CONF="${HOME}/.config/hypr/hyprlock.conf"
 MONITOR=" "
 
 # Function to change wallpaper
@@ -13,7 +14,7 @@ change_wallpaper() {
   local wallpapers=()
   while IFS= read -r -d $'\0' file; do
     wallpapers+=("$file")
-  done < <(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" \) -print0)
+  done < <(find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -print0)
 
   # Exit if no wallpapers found
   if [ ${#wallpapers[@]} -eq 0 ]; then
@@ -35,7 +36,7 @@ change_wallpaper() {
     CONFIG_FILE="$(mktemp /tmp/hyprpaper_temp.XXXXXX.conf)"
   fi
 
-  # Write new configuration
+  # Write new hyprpaper configuration
   cat >"$CONFIG_FILE" <<EOF
 preload = $selected_wallpaper
 wallpaper = $MONITOR,$selected_wallpaper
@@ -43,6 +44,15 @@ ipc = true
 EOF
 
   echo "Configuration written to: $CONFIG_FILE"
+
+  # Update hyprlock.conf background path
+  if [ -w "$HYPLOCK_CONF" ]; then
+    # Replace 'path = ...' inside the background block
+    sed -i "/^[[:space:]]*background[[:space:]]*{/,/^[[:space:]]*}/s|^\([[:space:]]*path[[:space:]]*= *\).*|\1$selected_wallpaper|" "$HYPLOCK_CONF"
+    echo "Updated hyprlock.conf background path to: $selected_wallpaper"
+  else
+    echo "Warning: Cannot write to $HYPLOCK_CONF"
+  fi
 
   # Start hyprpaper
   hyprpaper -c "$CONFIG_FILE" &
@@ -77,6 +87,6 @@ else
   while true; do
     change_wallpaper
     echo "Next wallpaper change in 10 minutes..."
-    sleep 600 # 10 minutes in seconds
+    sleep 600 # 10 minutes
   done
 fi
