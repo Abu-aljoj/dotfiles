@@ -2,7 +2,7 @@
 /* Author: Newman Sanchez (https://github.com/newmanls) */
 
 * {
-    font:   "IBM Plex Mono 12";
+//   font:   "IBM Plex Mono 12";
 
     nord0:     #2e3440;
     nord1:     #3b4252;
@@ -38,7 +38,7 @@ window {
     border-color:       @accent-color;
 
     location:   center;
-    width:      480px;
+//    width:      480px;
     border:     1px;
 }
 
@@ -57,8 +57,8 @@ prompt {
 }
 
 listview {
-    lines:      8;
-    columns:    1;
+//    lines:      8;
+//    columns:    1;
 
     fixed-height:   false;
 }

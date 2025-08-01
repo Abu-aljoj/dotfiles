@@ -12,7 +12,7 @@
     fg3:    #4C566A;
 }
 
-@import "template/rounded-template.rasi"
+@import "/home/jojo/.config/rofi/themes/rounded-template.rasi"
 
 element selected {
     text-color: @bg1;

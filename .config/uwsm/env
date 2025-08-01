@@ -1,3 +1,8 @@
+export HYPRCURSOR_THEME=Nordzy-hyprcursors
+export HYPRCURSOR_SIZE=24
+export XCURSOR_THEME=Nordzy-cursors
+export XCURSOR_SIZE=24
+
 export QT_QPA_PLATFORMTHEME=qt6ct
 
 export HYPRSHOT_DIR=/home/jojo/Pictures/Screenshots/
