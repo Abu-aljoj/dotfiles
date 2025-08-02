@@ -13,8 +13,8 @@
 }
 
 window {
-    location:       north;
-    y-offset:       calc(50% - 226px);
+//    location:       north;
+//    y-offset:       calc(50% - 226px);
 //    width:          480;
     border-radius:  24px;
 
