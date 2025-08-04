@@ -14,12 +14,39 @@ return {
         desc = "Toggle Dap UI",
       },
       {
-        "<leader>de",
+        "<F5>",
         function()
-          require("dapui").eval()
+          require("dap").continue()
         end,
-        desc = "Evaluate",
-        mode = { "n", "v" },
+        desc = "Start/Continue Debugging",
+      },
+      {
+        "<F9>",
+        function()
+          require("dap").toggle_breakpoint()
+        end,
+        desc = "Toggle Breakpoint",
+      },
+      {
+        "<F10>",
+        function()
+          require("dap").step_over()
+        end,
+        desc = "Step Over",
+      },
+      {
+        "<F11>",
+        function()
+          require("dap").step_into()
+        end,
+        desc = "Step Into",
+      },
+      {
+        "<F12>",
+        function()
+          require("dap").step_out()
+        end,
+        desc = "Step Out",
       },
     },
     opts = {
@@ -43,12 +70,11 @@ return {
 
       dapui.setup(opts)
 
-      -- codelldb adapter config
       dap.adapters.lldb = {
         type = "server",
         port = "${port}",
         executable = {
-          command = "/usr/bin/codelldb", -- adjust path if different
+          command = "/usr/bin/codelldb",
           args = { "--port", "${port}" },
         },
       }
