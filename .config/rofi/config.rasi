@@ -1,19 +1,14 @@
 // Rofi Config //
 
 configuration {
-  modes: "drun,filebrowser,emoji,calc,clipboard:/home/jojo/.config/rofi/Scripts/cliphist-rofi";
-  show-icons: false;
   font: "JetBrainsMonoNL NF 12";
   drun-display-format: "{name}";
-
-  display-drun: " Apps:";
-  display-filebrowser: " Files:";
-  display-emoji: "😄 Emoji:";
-  display-calc: " Calc:";
-  display-clipboard: " Clipboard:";
+  display-drun: "drun";
+  display-filebrowser: " Files";
+  display-emoji: "😄 Emoji";
+  display-calc: " Calc";
+  display-clipboard: " Clipboard";
 }
-
-@theme "~/.config/rofi/themes/rounded-nord-dark.rasi"
 
 listview {
   lines: 15;
@@ -22,3 +17,9 @@ listview {
 window {
   width: 30%;
 }
+
+//@theme "/usr/share/rofi/themes/android_notification.rasi"
+
+//@theme "/home/jojo/.config/rofi/themes/nord-oneline.rasi"
+
+@theme "/home/jojo/.config/rofi/themes/squared-nord.rasi"

@@ -11,3 +11,5 @@ export LANG=en_IL.UTF-8
 export LC_CTYPE=en_IL.UTF-8
 
 ELECTRON_OZONE_PLATFORM_HINT=wayland
+
+export LIBVIRT_DEFAULT_URI='qemu:///system'
