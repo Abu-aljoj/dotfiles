@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 apps=(
   "Bluetooth Manager:blueman-manager"
@@ -24,7 +24,7 @@ apps=(
   "Zen-browser Private Window:zen-browser --private-window"
 )
 
-choice=$(printf "%s\n" "${apps[@]}" | cut -d: -f1 | fzf --prompt="App: ")
+choice=$(printf "%s\n" "${apps[@]}" | cut -d: -f1 | fzf --prompt="> ")
 
 if [ -n "$choice" ]; then
   cmd=$(printf "%s\n" "${apps[@]}" | grep "^$choice:" | cut -d: -f2)

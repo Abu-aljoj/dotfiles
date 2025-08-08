@@ -1,5 +1,4 @@
 #!/bin/sh
-# Script for changing opacity on the fly
 
 STATE=$(hyprctl -j getoption decoration:active_opacity | jq ".float")
 

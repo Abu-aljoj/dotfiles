@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
-choice=$(printf "%s\n" "Lock" "Sleep" "Logout" "Reboot" "Shutdown" | fzf --prompt="Power: ")
+choice=$(printf "%s\n" "Lock" "Sleep" "Logout" "Reboot" "Shutdown" | fzf --prompt="> ")
 
 if [[ -z "$choice" ]]; then
   exit

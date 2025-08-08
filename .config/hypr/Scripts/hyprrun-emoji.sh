@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 FZF_EMOJI_DATA_FILE="$HOME/.config/hypr/Scripts/emoji.json"
 

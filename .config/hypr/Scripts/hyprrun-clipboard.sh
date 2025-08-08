@@ -1,7 +1,7 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
 # Use cliphist + fzf to pick a clipboard entry
-selection=$(cliphist list | fzf --prompt="Clipboard history » ") || exit 0
+selection=$(cliphist list | fzf --prompt="> ") || exit 0
 
 # Decode and copy to Wayland clipboard
 echo "$selection" | cliphist decode | wl-copy

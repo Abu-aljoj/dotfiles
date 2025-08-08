@@ -10,6 +10,8 @@ export HYPRSHOT_DIR=/home/jojo/Pictures/Screenshots/
 export LANG=en_IL.UTF-8
 export LC_CTYPE=en_IL.UTF-8
 
-ELECTRON_OZONE_PLATFORM_HINT=wayland
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
 
 export LIBVIRT_DEFAULT_URI='qemu:///system'
+
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jojo/.local/bin

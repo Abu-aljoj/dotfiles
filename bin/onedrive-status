@@ -1,6 +1,0 @@
-#!/bin/sh
-
-systemctl --user status onedrive-personal.service onedrive-biu.service
-
-#systemctl --user status onedrive-biu.service
-
