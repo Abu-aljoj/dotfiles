@@ -1,73 +1,96 @@
-#!/bin/sh
+#!/usr/bin/env zsh
+set -euo pipefail
 
-# Set working repo path
-REPO="$HOME/dotfiles"
+# === CONFIGURATION ===
+REPO="${DOTFILES_REPO:-$HOME/dotfiles}"
+CONFIG_DIRS=(fastfetch kitty hypr uwsm hyprpanel rofi nvim btop Kvantum)
+LOCAL_DIRS=(share/themes share/icons bin)
 
-# Exit if repo doesn't exist
-if [ ! -d "$REPO" ]; then
-  echo "Dotfiles repo not found at $REPO"
+DRY_RUN=false
+VERBOSE=false
+
+# === COLORS ===
+GREEN=$'\033[0;32m'
+YELLOW=$'\033[1;33m'
+RED=$'\033[0;31m'
+RESET=$'\033[0m'
+
+# === LOGGING ===
+log() { echo "${GREEN}[✔]${RESET} $1"; }
+warn() { echo "${YELLOW}[!]${RESET} $1"; }
+error() { echo "${RED}[✖]${RESET} $1" >&2; }
+
+# === DRY RUN HANDLER ===
+dry_exec() {
+  if $DRY_RUN; then
+    echo "[DRY RUN] $*"
+  else
+    eval "$@"
+  fi
+}
+
+# === SYNC FUNCTION ===
+sync_folder() {
+  local src="$1"
+  local dest="$2"
+
+  if [[ -d "$src" ]]; then
+    local cmd="rsync -a --delete ${VERBOSE:+--progress -v} \"$src/\" \"$dest/\""
+    dry_exec "$cmd"
+    log "Synced: ${src/#$HOME/~} → ${dest/#$HOME/~}"
+  else
+    warn "Missing: $src"
+  fi
+}
+
+# === ARGUMENT PARSING ===
+for arg in "$@"; do
+  case "$arg" in
+  --dry-run) DRY_RUN=true ;;
+  --verbose) VERBOSE=true ;;
+  *)
+    error "Unknown argument: $arg"
+    exit 1
+    ;;
+  esac
+done
+
+# === CHECK REPO ===
+[[ -d "$REPO" ]] || {
+  error "Dotfiles repo not found at $REPO"
   exit 1
-fi
+}
 
-echo "[1/4] Copying selected config folders..."
-
-# List of config folders to copy
-CONFIG_FOLDERS="fastfetch kitty hypr uwsm hyprpanel rofi nvim btop Kvantum"
-
-# Ensure the destination config directory exists
+# === SYNC CONFIG FILES ===
+log "[1/4] Syncing ~/.config folders..."
 mkdir -p "$REPO/.config"
-
-# Copy each folder individually
-for folder in $CONFIG_FOLDERS; do
-  SRC="$HOME/.config/$folder"
-  DEST="$REPO/.config/$folder"
-
-  if [ -d "$SRC" ]; then
-    # Remove existing folder in repo before copying
-    rm -rf "$DEST"
-    cp -r "$SRC" "$DEST"
-    echo "Copied $folder"
-  else
-    echo "Warning: $SRC does not exist, skipping."
-  fi
+for dir in $CONFIG_DIRS; do
+  sync_folder "$HOME/.config/$dir" "$REPO/.config/$dir"
 done
 
-# List of local folders to copy
-LOCAL_FOLDERS="share/themes share/icons bin"
-
-#Ensure the destination local directory exists
-mkdir -p "$REPO/.local/share"
-
-#Copy each local folder individually
-for folder in $LOCAL_FOLDERS; do
-  SRC="$HOME/.local/$folder"
-  DEST="$REPO/.local/$folder"
-
-  if [ -d "$SRC" ]; then
-    # Remove existing folder in repo before copying
-    rm -rf "$DEST"
-    cp -r "$SRC" "$DEST"
-    echo "Copied $folder"
-  else
-    echo "Warning: $SRC does not exist, skipping."
-  fi
+# === SYNC LOCAL FILES ===
+log "[2/4] Syncing ~/.local folders..."
+mkdir -p "$REPO/.local"
+for dir in $LOCAL_DIRS; do
+  sync_folder "$HOME/.local/$dir" "$REPO/.local/$dir"
 done
 
-echo "[2/4] Adding changes to Git..."
-cd "$REPO" || exit 1
-git add .
+# === GIT COMMIT ===
+log "[3/4] Git add and commit"
+cd "$REPO"
+dry_exec "git add ."
 
-echo "[3/4] Enter your commit message:"
-read -r COMMIT_MSG
-
-# Exit if message is empty
-if [ -z "$COMMIT_MSG" ]; then
-  echo "Commit message cannot be empty. Aborting."
-  exit 1
+# If dry run, skip commit
+if $DRY_RUN; then
+  warn "Dry run mode: skipping commit & push."
+  exit 0
 fi
 
-echo "[4/4] Committing and pushing..."
-git commit -m "$COMMIT_MSG"
-git push
+echo -n "Enter commit message (default: auto-generated): "
+read -r COMMIT_MSG
+[[ -z "$COMMIT_MSG" ]] && COMMIT_MSG="Update dotfiles: $(date '+%Y-%m-%d %H:%M:%S')"
 
-echo "Dotfiles updated and pushed with message: $COMMIT_MSG"
+git commit -m "$COMMIT_MSG" && log "Committed: $COMMIT_MSG"
+git push && log "[4/4] Pushed to origin"
+
+log "✅ Dotfiles updated successfully"

@@ -1,3 +1,0 @@
-#!/usr/bin/env zsh
-
-systemctl --user status onedrive-personal.service onedrive-biu.service
