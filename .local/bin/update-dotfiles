@@ -3,7 +3,7 @@ set -euo pipefail
 
 # === CONFIGURATION ===
 REPO="${DOTFILES_REPO:-$HOME/dotfiles}"
-CONFIG_DIRS=(fastfetch kitty hypr uwsm hyprpanel rofi nvim btop Kvantum)
+CONFIG_DIRS=(fastfetch kitty hypr uwsm waybar swaync rofi nvim btop Kvantum)
 LOCAL_DIRS=(share/themes share/icons bin)
 
 DRY_RUN=false

@@ -1,0 +1,35 @@
+{
+"include": [
+    "$HOME/.config/waybar/leftModules",
+    "$HOME/.config/waybar/centerModules",
+    "$HOME/.config/waybar/rightModules",
+  ],
+ "layer": "overlay",
+ "position": "top",
+ "spacing": 5,
+ "fixed-center": true,
+ "ipc": true,
+ "margin-top": 0,
+ "margin-left": 0,
+ "margin-right": 0,
+
+ "modules-left": [
+    "hyprland/workspaces",
+    "tray",
+    "mpris",
+  ],
+
+  "modules-center": [
+    "clock#4",
+  ],
+
+  "modules-right": [
+    "idle_inhibitor",
+    "hyprland/language",
+    "backlight",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "battery",
+    "custom/swaync",
+  ],
+}

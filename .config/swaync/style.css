@@ -1,0 +1,192 @@
+/* Nord palette */
+@define-color nord0 #2e3440; /* background dark */
+@define-color nord1 #3b4252;
+@define-color nord2 #434c5e;
+@define-color nord3 #4c566a;
+@define-color nord4 #d8dee9; /* text dim */
+@define-color nord5 #e5e9f0;
+@define-color nord6 #eceff4; /* text bright */
+@define-color nord7 #8fbcbb;
+@define-color nord8 #88c0d0;
+@define-color nord9 #81a1c1;
+@define-color nord10 #5e81ac;
+@define-color nord11 #bf616a; /* red */
+@define-color nord12 #d08770; /* orange */
+@define-color nord13 #ebcb8b; /* yellow */
+@define-color nord14 #a3be8c; /* green */
+@define-color nord15 #b48ead; /* purple */
+
+/* Main theme vars */
+@define-color noti-border-color @nord8;
+@define-color noti-bg alpha(@nord0, 0.9);
+@define-color noti-bg-alt @nord1;
+@define-color noti-bg-hover @nord2;
+@define-color text-color @nord6;
+
+/* Fonts */
+* {
+    font-family: "JetBrainsMonoNL Nerd Font", monospace;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Hover on notification row */
+.control-center .notification-row:focus,
+.control-center .notification-row:hover {
+    opacity: 1;
+    background: @noti-bg;
+    border-radius: 10px;
+}
+
+.notification-row { outline: none; }
+
+.notification {
+    background: @noti-bg;
+    padding: 3px 10px 3px 6px;
+    border-radius: 10px;
+    border: 2px solid @noti-border-color;
+}
+
+.notification-default-action {
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.close-button {
+    background: @nord11;
+    color: @noti-bg;
+    text-shadow: none;
+    padding: 0;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.close-button:hover {
+    background: @nord11;
+    transition: all .15s ease-in-out;
+    border: none;
+}
+
+.notification-action {
+    border: 1px solid @noti-border-color;
+    border-top: none;
+    border-radius: 10px;
+}
+.notification-default-action:hover,
+.notification-action:hover {
+    color: @text-color;
+    background: @noti-bg;
+}
+
+.inline-reply-entry {
+    background: @noti-bg;
+    color: @text-color;
+    caret-color: @text-color;
+    border: 1px solid @noti-border-color;
+    border-radius: 10px;
+}
+.inline-reply-button {
+    font-size: 0.5rem;
+    margin-left: 4px;
+    background: @noti-bg;
+    border: 1px solid @noti-border-color;
+    border-radius: 10px;
+    color: @text-color;
+}
+.inline-reply-button:hover {
+    background: @noti-bg-hover;
+}
+
+.summary, .time, .body {
+    font-size: 1rem;
+    font-weight: bold;
+    background: transparent;
+    color: @text-color;
+    text-shadow: none;
+}
+
+.control-center {
+    background: @noti-bg;
+    border: 1px solid @noti-border-color;
+    color: @text-color;
+    border-radius: 10px;
+}
+
+.widget-title {
+    color: @text-color;
+    background: @noti-bg-alt;
+    padding: 3px 6px;
+    margin: 5px;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+.widget-title>button {
+    font-size: 0.75rem;
+    color: @text-color;
+    border-radius: 10px;
+    background: transparent;
+    border: 0.5px solid @noti-border-color;
+}
+.widget-title>button:hover {
+    background: @text-color;
+    color: @nord11;
+}
+
+.widget-dnd {
+    background: @noti-bg-alt;
+    padding: 3px 6px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 0.5rem;
+    color: @noti-border-color;
+}
+.widget-dnd>switch {
+    border-radius: 10px;
+    border: 1px solid @nord8;
+    background: @noti-border-color;
+}
+.widget-dnd>switch:checked {
+    background: @nord11;
+    border: 1px solid @nord11;
+}
+.widget-dnd>switch slider {
+    background: @noti-bg;
+    border-radius: 10px;
+}
+.widget-dnd>switch:checked slider {
+    background: @noti-bg;
+}
+
+.widget-label>label {
+    font-size: 1rem;
+    color: @text-color;
+}
+
+.widget-buttons-grid {
+    font-size: large;
+    color: @noti-border-color;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 10px;
+    background: @noti-bg-alt;
+}
+.widget-buttons-grid>flowbox>flowboxchild>button {
+    margin: 1px;
+    background: @noti-bg;
+    border-radius: 10px;
+    color: @text-color;
+}
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+    background: @text-color;
+    color: @noti-bg-hover;
+}
+
+.widget-volume, .widget-backlight {
+    background: @noti-bg-alt;
+    padding: 2px;
+    margin: 10px 10px 5px 10px;
+    border-radius: 10px;
+    font-size: x-large;
+    color: @text-color;
+}
